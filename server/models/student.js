@@ -1,5 +1,4 @@
 var mongoose        = require("mongoose");
-var _obSchema       = mongoose.Schema.Types.ObjectId,
 
 var StudentSchema   = new mongoose.Schema({
     name: {
@@ -11,16 +10,16 @@ var StudentSchema   = new mongoose.Schema({
         type: String
     },
     level: {
-        type: Number,
+        type: String,
         default: 0
     },
     _user: {
-        type: _obSchema,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: [true, "User not in session"]
     },
     _lesson: {
-        type: _obSchema,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Lesson",
         required: [true, "User not in session"]
     }

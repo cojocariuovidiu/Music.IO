@@ -1,7 +1,6 @@
-var mongoose        = require('mongoose');
-var _obSchema       = mongoose.Schema.Types.ObjectId,
+var mongoose        = require("mongoose");
 
-var LessonSchema    = new mongoose.Schema({
+var LessonSchema      = new mongoose.Schema({
     title: {
         type: String,
         minlength: [5, "You must provide a title name"],
@@ -13,12 +12,12 @@ var LessonSchema    = new mongoose.Schema({
         required: [true, "Please provide a description"]
     },
     _user: {
-        type: _obSchema,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: [true, "User not logged in"]
     },
     _student: {
-        type: _obSchema,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Student",
         required: [true, "User not logged in"]
     }

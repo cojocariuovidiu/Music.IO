@@ -25,6 +25,5 @@ require("./server/config/mongoose");
 require("./server/config/routes")(app);
 
 /********** ROUTES **********/
-app.listen(port,() => 
+app.listen(port,() =>
 console.log("struggling at " + port));
-
