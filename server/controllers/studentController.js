@@ -6,18 +6,17 @@ var User        = mongoose.model("User");
 class StudentController {
 
     createStudent(req, res){
-        console.log("hitting sC in the bE");
-        Lesson.findById(req.params.lesson_id, (err, question) => {
-            var student = new Student (req.body);
-            student._user   = req.session.user_id;
-            student._lesson = req.session.lesson_id;
-            lesson._answer.push(student);
+        Lesson.findById(req.params.lesson_id, (err, lesson) => {
+            var student =  new Student(req.body);
+            student._user = req.session.user_id;
+            student._lesson = req.params.lesson_id;
+            lesson._student.push(student);
             student.save((err) => {
-                lesson.save((err) => {
-                    if(err){
-                        return res.json(err);
-                    }
-                    return res.json(student)
+                lesson.save((err)=>{
+                  if(err){
+                    return res.json(err);
+                }
+                return res.json(student)  
                 })
             })
         })

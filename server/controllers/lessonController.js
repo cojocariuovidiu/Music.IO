@@ -6,11 +6,8 @@ var User        = mongoose.model("User");
 class LessonController {
 
     create(req, res){
-        console.log("hitting create at _lC");
-        Lesson.create({ 
-            lesson: req.body.title,
-            description: req.body.description,
-            _user: req.session.user_id }, (err, lesson) => {
+        console.log(req.body);
+        Lesson.create({ title: req.body.title, description: req.body.description, _user: req.session.user_id }, (err, lesson) => {
                 if(err){
                     return res.json(err);
                 }

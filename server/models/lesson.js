@@ -8,7 +8,7 @@ var LessonSchema      = new mongoose.Schema({
     },
     description: {
         type: String,
-        minlength: [10, "You must provide a title description"],
+        minlength: [5, "You must provide a title description"],
         required: [true, "Please provide a description"]
     },
     _user: {
@@ -16,11 +16,11 @@ var LessonSchema      = new mongoose.Schema({
         ref: "User",
         required: [true, "User not logged in"]
     },
-    _student: {
+    _student: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Student",
         required: [true, "User not logged in"]
-    }
+    }]
 }, { timestamps: true })
 
 mongoose.model("Lesson", LessonSchema)
