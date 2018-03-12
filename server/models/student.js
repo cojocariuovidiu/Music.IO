@@ -11,7 +11,6 @@ var StudentSchema   = new mongoose.Schema({
     },
     level: {
         type: String,
-        default: 0
     },
     _user: {
         type: mongoose.Schema.Types.ObjectId,
