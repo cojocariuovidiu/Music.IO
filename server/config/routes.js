@@ -5,11 +5,11 @@ var Student = require('../controllers/studentController');
 module.exports  = function(app){
     /********** USER **********/ 
 
-    app.post    ("/user",               User.create);
-    app.get     ("/session",            User.session);
-    app.post    ("/login",              User.login);
+    app.post    ("/user",               User.create);   //
+    app.get     ("/session",            User.session);  //
+    app.post    ("/login",              User.login);    //
     app.get     ("/users",              User.show);
-    app.delete  ("/user",               User.logout);
+    app.delete  ("/user",               User.logout);   //
 
     /********** LESSON **********/ 
 
