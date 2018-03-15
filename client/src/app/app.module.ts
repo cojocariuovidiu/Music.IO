@@ -16,6 +16,7 @@ import { LessonService } from './server/controllers/lesson.service';
 import { StudentService } from './server/controllers/student.service';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './user/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     CreateComponent,
     ListComponent,
-    ShowComponent
+    ShowComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
