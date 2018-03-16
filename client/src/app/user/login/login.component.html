@@ -1,11 +1,11 @@
 <h4>Welcome to Music IO</h4>
 
 <h3>Register</h3>
-<form>
-  <input type="text" placeholder="First Name"><br>
-  <input type="text" placeholder="Last Name"><br>
-  <input type="text" placeholder="Email"><br>
-  <input type="password" placeholder="password"><br>
+<form (submit)="createUser()">
+  <input type="text" name="newUser.firstName" [(ngModel)]="newUser.firstName" placeholder="First Name"><br>
+  <input type="text" name="newUser.lastName" [(ngModel)]="newUser.lastName" placeholder="Last Name"><br>
+  <input type="text" name="newUser.email" [(ngModel)]="newUser.email" placeholder="Email"><br>
+  <input type="password" name="newUser.password" [(ngModel)]="newUser.password" placeholder="password"><br>
   <input type="submit" value="Register">
 </form>
 

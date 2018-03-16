@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
   }
 
   createUser(){
+    console.log("login.comp => createUser");
     this.registrationErrors = [];
     this._uS.create(this.newUser, (res) => {
       if(res.errors){
